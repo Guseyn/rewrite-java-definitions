@@ -1,7 +1,7 @@
 package org.openrewrite.after;
 
-import java.util.List;
+import java.util.Collection;
 
 public class F {
-    List<String> strings;
+    Collection<String> strings;
 }

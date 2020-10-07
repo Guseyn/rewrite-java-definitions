@@ -1,4 +1,6 @@
 package org.openrewrite.after;
 
-public class H {
+import java.io.Serializable;
+
+public class H implements Serializable {
 }
