@@ -16,7 +16,7 @@
     <dependency>
       <groupId>org.openrewrite</groupId>
       <artifactId>rewrite-java</artifactId>
-      <version>5.4.2</version>
+      <version>5.4.4</version>
     </dependency>
     <dependency>
       <groupId>org.openrewrite</groupId>
