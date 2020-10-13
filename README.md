@@ -21,6 +21,7 @@ This project contains set of visitors from the [docs](https://docs.openrewrite.o
 1) Folder `definitions` contains Java Definitions (visitors).
 2) Folder `visitor` contains additional visitors.
 3) Folder `refactor` contains `RefactorProcessor` that works in the following way:
+
     ```java
     // Example
     List<RefactorVisitor<?>> visitors = new ArrayList<>(){{
