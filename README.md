@@ -1,6 +1,6 @@
 # rewrite-java-definitions
 
-This project contains set of visitors from the [docs](https://docs.openrewrite.org/java/refactoring-java-source-code) of [Rewrite](https://github.com/openrewrite/rewrite) project.
+This project contains set of visitors from the [docs](https://docs.openrewrite.org/java/refactoring-java-source-code) of [Rewrite](https://github.com/openrewrite/rewrite) project. The main purpose of this project is to show how java definitions can be used in the code. Also this project is real life example of what you can see in the docs of Rewrite project.
 
 ## Project structure
 
