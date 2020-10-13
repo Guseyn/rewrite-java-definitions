@@ -5,9 +5,15 @@ import static java.util.Collections.emptyList;
 import org.openrewrite.java.AddField;
 import org.openrewrite.java.JavaRefactorVisitor;
 import org.openrewrite.java.tree.J;
+import org.openrewrite.java.tree.TreeBuilder;
 import org.openrewrite.refactor.RefactorProcessor;
 
 public class AddLogger extends JavaRefactorVisitor {
+    @Override
+    public J.Package visitPackage(J.Package pkg) {
+        return pkg.withExpr(TreeBuilder.buildName("org.openrewrite.after").withPrefix(pkg.getPrefix().concat(" ")));
+    }
+
     public J visitClassDecl(J.ClassDecl clazz) {
         if(needsLogger(clazz) && clazz
             .findFields("org.slf4j.Logger")

@@ -4,9 +4,15 @@ import java.io.IOException;
 import org.openrewrite.java.AddAnnotation;
 import org.openrewrite.java.JavaRefactorVisitor;
 import org.openrewrite.java.tree.J;
+import org.openrewrite.java.tree.TreeBuilder;
 import org.openrewrite.refactor.RefactorProcessor;
 
 public class AddAnnotationExample extends JavaRefactorVisitor {
+    @Override
+    public J.Package visitPackage(J.Package pkg) {
+        return pkg.withExpr(TreeBuilder.buildName("org.openrewrite.after").withPrefix(pkg.getPrefix().concat(" ")));
+    }
+
     public J visitMethod(J.MethodDecl method) {
         if(isPublicApi(method) && method
             .findAnnotations("@org.junit.jupiter.api.AfterAll")

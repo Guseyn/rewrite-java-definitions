@@ -28,7 +28,7 @@ public class RefactorProcessor {
         for (Change change : changes) {
             Path file = Paths.get("src/main/java/org/openrewrite/after/").resolve(change.getOriginal().getSourcePath().concat(javaExampleFileName));
             try (BufferedWriter sourceFileWriter = Files.newBufferedWriter(file)) {
-                sourceFileWriter.write(change.getFixed().print().replace("package org.openrewrite.before;", "package org.openrewrite.after;"));
+                sourceFileWriter.write(change.getFixed().print());
             }
         }
     }
