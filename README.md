@@ -33,3 +33,6 @@ This project contains set of visitors from the [docs](https://docs.openrewrite.o
     `RefactorProcessor.run(visitors, "A.java")` takes file `A.java` from folder `before`, applies visitors which is in `ArrayList`(as first argument) and then puts updated `A.java` into `after` folder.
  4)  Folder `before` contains original java files.
  5)  Folder `after` contains java files that have been processed by visitors from `definitions` folder.
+ 
+ # How to run definitions
+ Each of classes in `definitions` folder is executable, which applies visitors for one specified java file from `before` folder and puts updated version of it into `after` folder.
