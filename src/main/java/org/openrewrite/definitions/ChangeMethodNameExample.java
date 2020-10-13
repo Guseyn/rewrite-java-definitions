@@ -19,7 +19,7 @@ public class ChangeMethodNameExample {
         ChangePackageName cpn = new ChangePackageName();
         cpn.setNewPackageName("org.openrewrite.after");
         List<RefactorVisitor<?>> visitors = new ArrayList<>(){{
-            // add(cmn);
+            add(cmn);
             add(cmnStatic);
             add(cpn);
         }};
