@@ -20,19 +20,16 @@ This project contains set of visitors from the [docs](https://docs.openrewrite.o
 
 1) Folder `definitions` contains Java Definitions (visitors).
 2) Folder `visitor` contains additional visitors.
-3) Folder `refactor` contains `RefactorProcessor` which works in following way:
+3) Folder `refactor` contains `RefactorProcessor` that works in the following way:
     ```java
+    // Example
     List<RefactorVisitor<?>> visitors = new ArrayList<>(){{
        add(visitor1);
        add(visitor2);
        add(visitor3);
     }};
-    RefactorProcessor.run(new ArrayList<RefactorVisitor<?>>(){{
-       add(visitor1);
-       add(visitor2);
-       add(visitor3);
-    }}, "A.java");
+    RefactorProcessor.run(visitors, "A.java");
     ``` 
-    `RefactorProcessor.run()` takes file `A.java` from folder `before`, applies visitors which is in `ArrayList`(as first argument) and then puts updated `A.java` into `after` folder.
+    `RefactorProcessor.run(visitors, "A.java")` takes file `A.java` from folder `before`, applies visitors which is in `ArrayList`(as first argument) and then puts updated `A.java` into `after` folder.
  4)  Folder `before` contains original java files.
  5)  Folder `after` contains java files that have been processed by visitors from `definitions` folder.
