@@ -17,7 +17,7 @@ public class InsertMethodArgumentExample {
         ChangePackageName cpn = new ChangePackageName();
         cpn.setNewPackageName("org.openrewrite.after");
         AddImport adi = new AddImport();
-        adi.setType("MarkerFactory");
+        adi.setType("org.slf4j.MarkerFactory");
         adi.setOnlyIfReferenced(false);
         RefactorProcessor.run(new ArrayList<RefactorVisitor<?>>(){{
             add(ima);
