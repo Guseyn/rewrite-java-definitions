@@ -4,7 +4,7 @@ import org.openrewrite.classes.ClassWithMethods;
 
 public class E  {
     void foo() {
-        // new ClassWithMethods().foo();
+        new ClassWithMethods().foo();
         ClassWithMethods.fooStatic();
     }
 }
